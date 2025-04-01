@@ -1,0 +1,11 @@
+<!DOCTYPE html> <!--We use base html to have same template on all page made the content dynamic-->
+<html lang = 'en'>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title%}default Value{% endblock %}</title> <!--Using block we can have dynamic content with same template-->
+    </head>
+    <body>
+        <p>This will always be here</p>
+        {% block content %} {% endblock %}
+    </body>
+</html>
