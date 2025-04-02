@@ -1,0 +1,32 @@
+,Unnamed: 0,Technologies,Category
+0,0,HTML,Front-End
+1,1,PHP,Backend
+2,2,CSS,Front-End
+3,3,Node.js,Backend
+4,4,Javascript,Front-End
+5,5,Javascript,Backend
+6,6,React.js,Front-End
+7,7,Python,Backend
+8,8,Angular,Front-End
+9,9,Ruby,Backend
+10,10,Tailwind,Front-End
+11,11,C#,Backend
+12,12,Vue.js,Front-End
+13,13,C++,Backend
+14,14,React Native,Front-End
+15,15,Kotlin,Backend
+16,16,Next.js,Front-End
+17,17,Scala,Backend
+18,18,Flutter,Front-End
+19,19,Perl,Backend
+20,20,Tailwind CSS,Front-End
+21,21,Spring Boot,Backend
+22,22,Three.js,Front-End
+23,23,SQL,Backend
+24,24,TypeScript,Front-End
+25,25,ASP.NET Core,Backend
+26,26,Vite,Front-End
+27,27,Django,Backend
+28,28,Gatsby.js,Front-End
+29,29,Go,Backend
+30,30,Svelte,Front-End

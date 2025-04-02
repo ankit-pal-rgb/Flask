@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title%}
+    <h1>Index Page</h1>
+{% endblock %}
+
+{% block content %}
+    <h1>Hello World</h1>
+    <form method="POST" action="{{url_for('index')}}"> <!--T1 start-->
+        <input type="text" name="Username" placeholder="Username"><br>
+        <input type="password" name="Password" placeholder="Password"><br>
+        <input type="submit" value="Login">   <!--T1 End-->
+    </form>
+
+    <h1>File Upload</h1>
+    <!-- T2 Start -->
+     <form method="POST" action="{{url_for('file_upload')}}" enctype="multipart/form-data"> <!-- We need to specify encoding type-->
+        <!-- There is content type for every file we need to find the string foe that and then we mention it in accept -->
+        <!-- If I want to accept multiple file then seperate it with commas -->
+        <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, text/plain" required="required">
+        <input type="submit" name="upload">
+    </form>
+    <!-- T2 End -->
+
+    <h1>Convert To CSV</h1>
+    <!-- T3 Start -->
+     <form method="POST" action="{{url_for('convert_csv')}}" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required="required">
+        <input type="submit" name="upload">
+    </form>
+    <!-- T3 End -->
+
+    <h1>Convert To CSV Two</h1>
+    <!-- T4 Start -->
+     <form method="POST" action="{{url_for('convert_csv_two')}}" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required="required">
+        <input type="submit" name="upload">
+    </form>
+    <!-- T4 End -->
+
+    <h1>Javascript Json Request</h1>
+    <!-- T5 Start -->
+    <button id="post_button">Send Post Request</button>
+    <script type="text/Javascript">
+        const postButton = document.getElementById('post_button')
+
+        const jsonData = {name : 'Mike', greeting : 'Hello'}
+
+        postButton.addEventListener('click', () => {
+            fetch('{{url_for("handle_post")}}', {
+                method : 'POST',
+                headers : {
+                    'Content-Type' : 'application/json; charset=utf-8'
+                },
+                body : JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            .then(data => console.log('Sucess:', data))
+            .catch((error) => {
+                console.error('Error:', error)
+            });
+            });
+    </script>
+    <!-- T5 End -->
+{% endblock %}
