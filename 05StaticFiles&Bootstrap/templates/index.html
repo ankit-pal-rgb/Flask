@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    <h1>Index Page</h1>
+{% endblock %}
+
+{% block content %}
+    <h1>Let's make something that changes world</h1>
+<!-- Using static file like image in html -->    
+    <img src="/img/CNN.jpeg" alt="Text" /> 
+<!-- Using Bootstrap -->    
+    <a href='#' class="btn btn-primary">Button Text</a>
+<!-- We also need to include the style sheet in base.html-->    
+    <p class="special">CNN Architecture</p>
+<!-- Using javascript -->
+    <script src="/js/hello.js"></script>
+{% endblock %}    

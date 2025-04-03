@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html lang = 'en'>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title%}default Value{% endblock %}</title> 
+        <!-- Including Css in href specify the path -->
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <!-- Including bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    </head>
+    <body>
+        {% block content %} {% endblock %}
+        <!-- Including bootstrap js -->
+        <script src="/js/bootstrap.js"></script>
+    </body>
+</html>
